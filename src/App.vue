@@ -1,13 +1,41 @@
-<template>
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-</template>
+<script>
+import axios from 'axios';
 
-<script setup>
+export default {
+  name: 'App',
+  data: () {
+    return {
+    fields: ['usurname','password','email','isAtive'],
+    id: "",
+    usurname: "",
+    password: "",
+    email: "",
+    isActive: "",
+    listarDatos: [],
+    }
+  },
+  mounted() {
+    axios.get('http://localhost:3000/usuarios')
+  }
+
+}
+
+
+
 
 </script>
 
-<style>
+
+
+
+
+
+<template>
+ <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+</template>
+
+<style scoped>
 
 </style>
