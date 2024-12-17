@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply bg-cover; /* Asegúrate de que la imagen cubra el área y esté centrada */
-    background-image: url('/public/images/textura-fondo.jpg'); /* Cambia la ruta a tu imagen */
+    @apply bg-cover; 
+    background-image: url('/public/images/fondo-degradado.jpg'); 
   }
+

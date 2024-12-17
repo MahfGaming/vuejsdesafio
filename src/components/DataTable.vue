@@ -1,4 +1,5 @@
 <template>
+  <div class="max-h-96 overflow-y-auto">
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg w-full max-w-4xl">
       <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -22,7 +23,7 @@
             <td class="px-6 py-4">{{ usuario.isActive ? 'Activo' : 'Inactivo' }}</td>
             <td class="px-6 py-4">
               <router-link :to="{ name: 'EditarUsuario', params: { id: usuario.id } }">
-                <button  @edit="handleEdit"
+                <button
                   type="button" 
                   class="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-7 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
                   Editar 
@@ -39,24 +40,24 @@
         </tbody>
       </table>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    props: {
-      listarDatos: {
-        type: Array,
-        required : true
-      }
-    },
-    methods: {
-      emitirEliminar(id) {
-        this.$emit('delete', id); // Aqui se Emite el ID para eliminar
-      }
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    listarDatos: {
+      type: Array,
+      required: true
+    }
+  },
+  methods: {
+    emitirEliminar(id) {
+      this.$emit('delete', id); // Aquí se emite el ID para eliminar
     }
   }
-  </script>
-  
-  <style scoped>
- 
-  </style>
+}
+</script>
+
+<style scoped>
+</style>
