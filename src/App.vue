@@ -81,8 +81,8 @@ export default {
     },
     
     handleDelete(id) {
-      this.userIdToDelete = id; // Almacena el ID del usuario a eliminar
-      this.isModalVisible = true; // Muestra el modal de confirmación
+      this.userIdToDelete = id; // Aqui almacenamos el ID del usuario a eliminar
+      this.isModalVisible = true; // Mostramos el modal de confirmación
     },
     
     async confirmDelete() {

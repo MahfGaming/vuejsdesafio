@@ -112,7 +112,7 @@ export default {
         console.log('Usuario registrado:', response.data);
         this.successMessage = true;
         this.errorMessage = '';
-        this.nuevoUsuario = { usurname: '', password: '', email: '', isActive: true };
+        this.nuevoUsuario = { usurname: '', password: '', email: '', isActive: false };
 
         setTimeout(() => {
           this.successMessage = false;
